@@ -1,0 +1,323 @@
+<rdf:RDF
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:engineering="http://example.com/engineering">
+
+  <!-- OWL Header Example -->
+  <owl:Ontology rdf:about="http://www.example.com/engineering">
+    <dc:title>Engineering Ontology</dc:title>
+    <dc:description>An ontology for engineering disciplines</dc:description>
+  </owl:Ontology>
+
+  <!-- OWL Class Definition - Engineering -->
+  <owl:Class rdf:about="http://www.example.com/engineering#Engineering">
+    <rdfs:label>Engineering</rdfs:label>
+    <rdfs:comment>The class of all engineering disciplines.</rdfs:comment>
+  </owl:Class>
+
+  <!-- OWL Subclass Definition - Mechanical Engineering -->
+  <owl:Class rdf:about="http://www.example.com/engineering#MechanicalEngineering">
+    <rdfs:subClassOf rdf:resource="http://www.example.com/engineering#Engineering"/>
+    <rdfs:label>Mechanical engineering</rdfs:label>
+    <rdfs:comment>The class of mechanical engineering discipline.</rdfs:comment>
+  </owl:Class>
+
+  <!-- Instances of Maintenance and Lifecycle Management -->
+  <owl:Class rdf:about="http://www.example.com/engineering#MaintenanceLifecycleManagement">
+    <rdfs:subClassOf rdf:resource="http://www.example.com/engineering#MechanicalEngineering"/>
+    <rdfs:label>Maintenance and Lifecycle Management</rdfs:label>
+    <rdfs:comment>Instance of maintenance and lifecycle management in mechanical engineering.</rdfs:comment>
+  </owl:Class>
+
+<!-- Sub Class - Historical Data and Insights -->
+<owl:Class rdf:about="http://www.example.com/engineering#HistoricalDataAndInsights">
+  <rdfs:subClassOf rdf:resource="http://www.example.com/engineering#MaintenanceLifecycleManagement"/>
+  <rdfs:label>Historical Data and Insights</rdfs:label>
+  <rdfs:comment>Instance related to historical data and insights in maintenance and lifecycle management.</rdfs:comment>
+</owl:Class>
+
+<!-- Instance - Historical Data and Insights -->
+<rdf:Description rdf:about="http://www.example.com/engineering#Inspection">
+  <rdf:type rdf:resource="http://www.example.com/engineering#HistoricalDataAndInsights"/>
+  <rdfs:label>Inspection</rdfs:label>
+  <rdfs:comment>Instance related to Historical Data and Insights in maintenance and lifecycle management.</rdfs:comment>
+</rdf:Description>
+
+<!-- Instance - Historical Data and Insights -->
+<rdf:Description rdf:about="http://www.example.com/engineering#WorkOrders">
+  <rdf:type rdf:resource="http://www.example.com/engineering#HistoricalDataAndInsights"/>
+  <rdfs:label>Work Orders</rdfs:label>
+  <rdfs:comment>Instance related to Historical Data and Insights in maintenance and lifecycle management.</rdfs:comment>
+</rdf:Description>
+
+<!-- Instance - Historical Data and Insights -->
+<rdf:Description rdf:about="http://www.example.com/engineering#Costs">
+  <rdf:type rdf:resource="http://www.example.com/engineering#HistoricalDataAndInsights"/>
+  <rdfs:label>Costs</rdfs:label>
+  <rdfs:comment>Instance related to Historical Data and Insights in maintenance and lifecycle management.</rdfs:comment>
+</rdf:Description>
+<!-- Instance - Lifecycle Costs -->
+<rdf:Description rdf:about="http://www.example.com/engineering#LifecycleCosts">
+  <rdf:type rdf:resource="http://www.example.com/engineering#MaintenanceLifecycleManagement"/>
+  <rdfs:label>Lifecycle Costs</rdfs:label>
+  <rdfs:comment>Instance related to lifecycle costs in maintenance and lifecycle management.</rdfs:comment>
+</rdf:Description>
+
+<!-- Instance - End-of-Life Strategies -->
+<rdf:Description rdf:about="http://www.example.com/engineering#EndOfLifeStrategies">
+  <rdf:type rdf:resource="http://www.example.com/engineering#MaintenanceLifecycleManagement"/>
+  <rdfs:label>End-of-Life Strategies</rdfs:label>
+  <rdfs:comment>Instance related to end-of-life strategies in maintenance and lifecycle management.</rdfs:comment>
+</rdf:Description>
+
+<!-- Instance - Preventive Maintenance -->
+<rdf:Description rdf:about="http://www.example.com/engineering#PreventiveMaintenance">
+  <rdf:type rdf:resource="http://www.example.com/engineering#MaintenanceLifecycleManagement"/>
+  <rdfs:label>Preventive Maintenance</rdfs:label>
+  <rdfs:comment>Instance related to preventive maintenance in maintenance and lifecycle management.</rdfs:comment>
+</rdf:Description>
+
+<!-- Instance - Repairs -->
+<rdf:Description rdf:about="http://www.example.com/engineering#Repairs">
+  <rdf:type rdf:resource="http://www.example.com/engineering#MaintenanceLifecycleManagement"/>
+  <rdfs:label>Repairs</rdfs:label>
+  <rdfs:comment>Instance related to repairs in maintenance and lifecycle management.</rdfs:comment>
+</rdf:Description>
+
+  <!-- Instances of Engineering Design -->
+  <owl:Class rdf:about="http://www.example.com/engineering#EngineeringDesign">
+    <rdfs:subClassOf rdf:resource="http://www.example.com/engineering#MechanicalEngineering"/>
+    <rdfs:label>Engineering Design</rdfs:label>
+    <rdfs:comment>Instance of engineering design in mechanical engineering.</rdfs:comment>
+  </owl:Class>
+
+<!-- Instance - Fundamental Principles -->
+<owl:Class rdf:about="http://www.example.com/engineering#FundamentalPrinciples">
+  <rdfs:subClassOf rdf:resource="http://www.example.com/engineering#EngineeringDesign"/>
+  <rdfs:label>Fundamental Principles</rdfs:label>
+  <rdfs:comment>Instance related to fundamental principles in engineering design.</rdfs:comment>
+</owl:Class>
+
+<!-- Instance of Fundamental Principles -->
+<rdf:Description rdf:about="http://www.example.com/engineering#Reliability">
+  <rdf:type rdf:resource="http://www.example.com/engineering#FundamentalPrinciples"/>
+  <rdfs:label>Reliability</rdfs:label>
+  <rdfs:comment>Instance related to Fundamental Principles in engineering design.</rdfs:comment>
+</rdf:Description>
+
+<!-- Instance of Fundamental Principles -->
+<rdf:Description rdf:about="http://www.example.com/engineering#Safety">
+  <rdf:type rdf:resource="http://www.example.com/engineering#FundamentalPrinciples"/>
+  <rdfs:label>Safety</rdfs:label>
+  <rdfs:comment>Instance related to Fundamental Principles in engineering design.</rdfs:comment>
+</rdf:Description>
+
+<!-- Instance of Fundamental Principles -->
+<rdf:Description rdf:about="http://www.example.com/engineering#DesignForFunctionality">
+  <rdf:type rdf:resource="http://www.example.com/engineering#FundamentalPrinciples"/>
+  <rdfs:label>Design For Functionality</rdfs:label>
+  <rdfs:comment>Instance related to Fundamental Principles in engineering design.</rdfs:comment>
+</rdf:Description>
+
+<!-- Instance - Sustainability -->
+<rdf:Description rdf:about="http://www.example.com/engineering#Sustainability">
+  <rdf:type rdf:resource="http://www.example.com/engineering#EngineeringDesign"/>
+  <rdfs:label>Sustainability</rdfs:label>
+  <rdfs:comment>Instance related to sustainability in engineering design.</rdfs:comment>
+</rdf:Description>
+
+<!-- Instance - Optimization -->
+<rdf:Description rdf:about="http://www.example.com/engineering#Optimization">
+  <rdf:type rdf:resource="http://www.example.com/engineering#EngineeringDesign"/>
+  <rdfs:label>Optimization</rdfs:label>
+  <rdfs:comment>Instance related to optimization in engineering design.</rdfs:comment>
+</rdf:Description>
+
+<!-- Instance - Simulation Techniques -->
+<rdf:Description rdf:about="http://www.example.com/engineering#SimulationTechniques">
+  <rdf:type rdf:resource="http://www.example.com/engineering#EngineeringDesign"/>
+  <rdfs:label>Simulation Techniques</rdfs:label>
+  <rdfs:comment>Instance related to simulation techniques in engineering design.</rdfs:comment>
+</rdf:Description>
+
+<!-- Instance - Design Validation and Testing -->
+<rdf:Description rdf:about="http://www.example.com/engineering#DesignValidationAndTesting">
+  <rdf:type rdf:resource="http://www.example.com/engineering#EngineeringDesign"/>
+  <rdfs:label>Design Validation and Testing</rdfs:label>
+  <rdfs:comment>Instance related to design validation and testing in engineering design.</rdfs:comment>
+</rdf:Description>
+
+
+  <!-- Instances of Knowledge Discovery -->
+  <owl:Class rdf:about="http://www.example.com/engineering#KnowledgeDiscovery">
+    <rdfs:subClassOf rdf:resource="http://www.example.com/engineering#MechanicalEngineering"/>
+    <rdfs:label>Knowledge Discovery</rdfs:label>
+    <rdfs:comment>Instance of knowledge discovery in mechanical engineering.</rdfs:comment>
+  </owl:Class>
+
+<!-- Subclass - Data Analysis Tool -->
+<owl:Class rdf:about="http://www.example.com/engineering#DataAnalysisTool">
+  <rdfs:subClassOf rdf:resource="http://www.example.com/engineering#KnowledgeDiscovery"/>
+  <rdfs:label>Data Analysis Tool</rdfs:label>
+  <rdfs:comment>Instance related to data analysis tools in knowledge discovery.</rdfs:comment>
+</owl:Class>
+
+<!-- Instance of Data Analysis Tool -->
+<rdf:Description rdf:about="http://www.example.com/engineering#DescreptiveStatistics">
+  <rdf:type rdf:resource="http://www.example.com/engineering#DataAnalysisTool"/>
+  <rdfs:label>Descreptive Statistics</rdfs:label>
+  <rdfs:comment>Instance related to Data Analysis Tool in knowledge discovery.</rdfs:comment>
+</rdf:Description>
+
+<!-- Instance of Data Analysis Tool -->
+<rdf:Description rdf:about="http://www.example.com/engineering#RegressionAnalysis">
+  <rdf:type rdf:resource="http://www.example.com/engineering#DataAnalysisTool"/>
+  <rdfs:label>Regression Analysis</rdfs:label>
+  <rdfs:comment>Instance related to Data Analysis Tool in knowledge discovery.</rdfs:comment>
+</rdf:Description>
+
+<!-- Instance of Data Analysis Tool -->
+<rdf:Description rdf:about="http://www.example.com/engineering#StatisticalProcessControl">
+  <rdf:type rdf:resource="http://www.example.com/engineering#DataAnalysisTool"/>
+  <rdfs:label>Statistical Process Control</rdfs:label>
+  <rdfs:comment>Instance related to Data Analysis Tool in knowledge discovery.</rdfs:comment>
+</rdf:Description>
+
+<!-- Instance - Pattern Recognition and Machine Learning -->
+<rdf:Description rdf:about="http://www.example.com/engineering#PatternRecognitionAndMachineLearning">
+  <rdf:type rdf:resource="http://www.example.com/engineering#KnowledgeDiscovery"/>
+  <rdfs:label>Pattern Recognition and Machine Learning</rdfs:label>
+  <rdfs:comment>Instance related to pattern recognition and machine learning in knowledge discovery.</rdfs:comment>
+</rdf:Description>
+
+<!-- Instance - Data Integration -->
+<rdf:Description rdf:about="http://www.example.com/engineering#DataIntegration">
+  <rdf:type rdf:resource="http://www.example.com/engineering#KnowledgeDiscovery"/>
+  <rdfs:label>Data Integration</rdfs:label>
+  <rdfs:comment>Instance related to data integration in knowledge discovery.</rdfs:comment>
+</rdf:Description>
+
+<!-- Instance - Fundamental Principles -->
+<rdf:Description rdf:about="http://www.example.com/engineering#FundamentalPrinciples">
+  <rdf:type rdf:resource="http://www.example.com/engineering#EngineeringDesign"/>
+  <rdf:type rdf:resource="http://www.example.com/engineering#KnowledgeDiscovery"/>
+  <rdfs:label>Fundamental Principles</rdfs:label>
+  <rdfs:comment>Instance related to fundamental principles in both engineering design and knowledge discovery.</rdfs:comment>
+</rdf:Description>
+
+<!-- Instance - Advanced Data Analysis -->
+<rdf:Description rdf:about="http://www.example.com/engineering#AdvancedDataAnalysis">
+  <rdf:type rdf:resource="http://www.example.com/engineering#KnowledgeDiscovery"/>
+  <rdfs:label>Advanced Data Analysis</rdfs:label>
+  <rdfs:comment>Instance related to advanced data analysis in knowledge discovery.</rdfs:comment>
+</rdf:Description>
+
+
+  <!-- Instances of Quality Control -->
+  <owl:Class rdf:about="http://www.example.com/engineering#QualityControl">
+    <rdfs:subClassOf rdf:resource="http://www.example.com/engineering#MechanicalEngineering"/>
+    <rdfs:label>Quality Control</rdfs:label>
+    <rdfs:comment>Instance of quality control in mechanical engineering.</rdfs:comment>
+  </owl:Class>
+
+<!-- Instance - Safety Measures -->
+<rdf:Description rdf:about="http://www.example.com/engineering#SafetyMeasures">
+  <rdf:type rdf:resource="http://www.example.com/engineering#QualityControl"/>
+  <rdfs:label>Safety Measures</rdfs:label>
+  <rdfs:comment>Instance related to safety measures in quality control.</rdfs:comment>
+</rdf:Description>
+
+<!-- Instance - Continuous Improvement -->
+<rdf:Description rdf:about="http://www.example.com/engineering#ContinuousImprovement">
+  <rdf:type rdf:resource="http://www.example.com/engineering#QualityControl"/>
+  <rdfs:label>Continuous Improvement</rdfs:label>
+  <rdfs:comment>Instance related to continuous improvement in quality control.</rdfs:comment>
+</rdf:Description>
+
+<!-- Instance - Industry Regulations -->
+<rdf:Description rdf:about="http://www.example.com/engineering#IndustryRegulations">
+  <rdf:type rdf:resource="http://www.example.com/engineering#QualityControl"/>
+  <rdfs:label>Industry Regulations</rdfs:label>
+  <rdfs:comment>Instance related to industry regulations in quality control.</rdfs:comment>
+</rdf:Description>
+
+<!-- Instance - Quality Parameters -->
+<rdf:Description rdf:about="http://www.example.com/engineering#QualityParameters">
+  <rdf:type rdf:resource="http://www.example.com/engineering#QualityControl"/>
+  <rdfs:label>Quality Parameters</rdfs:label>
+  <rdfs:comment>Instance related to quality parameters in quality control.</rdfs:comment>
+</rdf:Description>
+
+<!-- Instance - Inspection Processes -->
+<rdf:Description rdf:about="http://www.example.com/engineering#InspectionProcesses">
+  <rdf:type rdf:resource="http://www.example.com/engineering#QualityControl"/>
+  <rdfs:label>Inspection Processes</rdfs:label>
+  <rdfs:comment>Instance related to inspection processes in quality control.</rdfs:comment>
+</rdf:Description>
+
+  <!-- Instances of Education and Training -->
+  <owl:Class rdf:about="http://www.example.com/engineering#EducationAndTraining">
+    <rdfs:subClassOf rdf:resource="http://www.example.com/engineering#MechanicalEngineering"/>
+    <rdfs:label>Education and Training </rdfs:label>
+    <rdfs:comment>Instance of education and training in mechanical engineering.</rdfs:comment>
+  </owl:Class>
+
+  <!-- SubClass - Interactive Learning Tools -->
+<owl:Class rdf:about="http://www.example.com/engineering#InteractiveLearningTools">
+  <rdfs:subClassOf rdf:resource="http://www.example.com/engineering#EducationAndTraining"/>
+  <rdfs:label>Interactive Learning Tools</rdfs:label>
+  <rdfs:comment>Instance related to interactive learning tools in education and training.</rdfs:comment>
+</owl:Class>
+
+<!-- Instance of Interactive Learning Tools -->
+<rdf:Description rdf:about="http://www.example.com/engineering#MagicMarks">
+  <rdf:type rdf:resource="http://www.example.com/engineering#InteractiveLearningTools"/>
+  <rdfs:label>Magic Marks</rdfs:label>
+  <rdfs:comment>Instance related to Interactive Learning Tools in education and training.</rdfs:comment>
+</rdf:Description>
+
+<!-- Instance of Interactive Learning Tools -->
+<rdf:Description rdf:about="http://www.example.com/engineering#MechNets">
+  <rdf:type rdf:resource="http://www.example.com/engineering#InteractiveLearningTools"/>
+  <rdfs:label>Mech Nets</rdfs:label>
+  <rdfs:comment>Instance related to Interactive Learning Tools in education and training.</rdfs:comment>
+</rdf:Description>
+
+<!-- Instance of Interactive Learning Tools -->
+<rdf:Description rdf:about="http://www.example.com/engineering#Kahoot">
+  <rdf:type rdf:resource="http://www.example.com/engineering#InteractiveLearningTools"/>
+  <rdfs:label>Kahoot</rdfs:label>
+  <rdfs:comment>Instance related to Interactive Learning Tools in education and training.</rdfs:comment>
+</rdf:Description>
+
+<!-- Instance - Student Learning -->
+<rdf:Description rdf:about="http://www.example.com/engineering#StudentLearning">
+  <rdf:type rdf:resource="http://www.example.com/engineering#EducationAndTraining"/>
+  <rdfs:label>Student Learning</rdfs:label>
+  <rdfs:comment>Instance related to student learning in education and training.</rdfs:comment>
+</rdf:Description>
+
+<!-- Instance - Integration into Educational Programs -->
+<rdf:Description rdf:about="http://www.example.com/engineering#IntegrationIntoEducationalPrograms">
+  <rdf:type rdf:resource="http://www.example.com/engineering#EducationAndTraining"/>
+  <rdfs:label>Integration into Educational Programs</rdfs:label>
+  <rdfs:comment>Instance related to integration into educational programs in education and training.</rdfs:comment>
+</rdf:Description>
+
+<!-- Instance - Educational Resources -->
+<rdf:Description rdf:about="http://www.example.com/engineering#EducationalResources">
+  <rdf:type rdf:resource="http://www.example.com/engineering#EducationAndTraining"/>
+  <rdfs:label>Educational Resources</rdfs:label>
+  <rdfs:comment>Instance related to educational resources in education and training.</rdfs:comment>
+</rdf:Description> 
+
+<!-- Instance - Professional Development -->
+<rdf:Description rdf:about="http://www.example.com/engineering#ProfessionalDevelopment">
+  <rdf:type rdf:resource="http://www.example.com/engineering#EducationAndTraining"/>
+  <rdfs:label>Professional Development</rdfs:label>
+  <rdfs:comment>Instance related to educational resources in education and training.</rdfs:comment>
+</rdf:Description> 
+
+</rdf:RDF>
